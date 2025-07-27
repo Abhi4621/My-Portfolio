@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhi Pandey - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/715dbb005f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer & Developer</p>
+                <h1>Hi, I'm <span>Abhi</span><br>From India</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row"> <div class="about-col-1">
+                    <img src="images/IMG20241117121834.jpg" alt="A photo of Abhi Pandey">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I'm Abhi Pandey, from Kanpur, India, currently in my 3rd year of studies at VIT Bhopal. I'm enthusiastically building foundational knowledge in front-end development (HTML, CSS, JavaScript) and Java programming, particularly for Android app development. While I possess a beginner-level understanding in these technical areas, I am a highly motivated and rapid learner, constantly eager to expand my skills and tackle new challenges. Beyond coding, I also bring an introductory understanding of event organization, driven by a passion for planning and executing successful experiences, and I'm keen to learn and contribute in both the tech and event management domains.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-End Web Development</span><br>Building responsive and interactive web interfaces using HTML, CSS, and JavaScript.</li>
+                            <li><span>Java Programming</span><br>Developing foundational applications and understanding core concepts in Java.</li>
+                            <li><span>Learning & Growth</span><br>Actively expanding knowledge in advanced development frameworks and mobile platforms.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Coordinator</span><br>Defence Warriors Club, VIT Bhopal</li>
+                            <li><span>Coordinator</span><br>Vitronix Club, VIT Bhopal</li>
+                            <li><span>Event Management</span><br>FUSION CLUB, VIT BHOPAL</li>
+                            <li><span>Event Management</span><br>UX Club, VIT BHOPAL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech in Computer Science and Engineering (AI/ML Specialization)</span><br>VIT Bhopal<br>Expected Graduation: 2027</li>
+                            <li><span>Secondary and Higher Secondary Education (Class 10th & 12th)</span><br>KDMA World School, Kanpur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Front End Development</h2>
+                    <p>As an aspiring front-end developer, I possess beginner-level understanding of HTML, CSS, and JavaScript. I'm committed to continuous learning, constantly exploring new technologies, and ready to dive deeper into building engaging web experiences.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Java Programming</h2>
+                    <p>I possess foundational knowledge in Java programming, having explored its core concepts and basic application development. I am highly motivated to deepen my understanding, master advanced Java techniques, and apply them to various software development challenges.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Event Organizer</h2>
+                    <p>I have an introductory understanding of event planning and organization, backed by a strong passion for creating memorable experiences. I am keen to learn the intricacies of event management and am ready to take on new challenges to refine my expertise.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Screenshot 2025-07-02 094408.png" alt="Skin Disease Detection Project Screenshot">
+                    <div class="layer">
+                        <h3>Skin Disease Detection</h3>
+                        <p>Developed a prototype application focused on identifying common skin conditions using image analysis. This project involved foundational concepts of data processing and basic classification, showcasing an early exploration into practical applications of technology in healthcare.</p>
+                        <a href="https://huggingface.co/spaces/Tanishqdas/skindieasedetection?logs=container"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Screenshot 2025-07-02 094806.png" alt="Plant Disease Detection Project Screenshot">
+                    <div class="layer">
+                        <h3>Plant Disease Detection</h3>
+                        <p>Explored the use of image recognition techniques to identify common diseases in plants. This project involved basic data collection and analysis, demonstrating an initial understanding of applying technology to agricultural challenges.</p>
+                        <a href="https://huggingface.co/spaces/Tanishqdas/Potato_diease"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div> </div> </div> <div id="contact">
+        <div class="container">
+            <div class="row"> <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> abhipandey.4621@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7905374087</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Abhi4621"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/_abhii_pandey/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/abhi-pandey-0257bb274/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://x.com/AbhiPan85917053"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <a href="images/my_resume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Abhi Pandey. All rights reserved</p>
+        </div>
+    </div>
+
+    <script>
+        // --- SCRIPT FOR GOOGLE SHEET FORM SUBMISSION ---
+        const scriptURL = ''; // <-- IMPORTANT: Add your Google Web App URL here!
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    // IMPROVEMENT: Show success message and clear the form
+                    msg.innerHTML = "Message sent successfully!";
+                    setTimeout(function() {
+                        msg.innerHTML = "";
+                    }, 5000); // Message disappears after 5 seconds
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+
+    <script>
+        // --- SCRIPT FOR TABS (ABOUT ME SECTION) ---
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        // CORRECTED: The function now accepts the event 'evt' and the 'tabName'
+        function opentab(evt, tabName) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            // Uses the passed 'evt' object to identify the clicked element
+            evt.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        // --- SCRIPT FOR SIDE NAVIGATION MENU (MOBILE VIEW) ---
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
