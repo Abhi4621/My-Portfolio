@@ -4,8 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhi Pandey - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/715dbb005f.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* --- CSS FOR IMAGE UNIFORMITY --- */
+        #portfolio, #certifications {
+            padding: 50px 0;
+        }
+
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
+
+        .work {
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            /* FORCING UNIFORM HEIGHT FOR ALL BOXES */
+            height: 300px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .work img {
+            width: 100%;
+            height: 100%; /* Fill the 300px container */
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s;
+            /* MAGIC LINE: Crops image to fit without stretching */
+            object-fit: cover; 
+            /* Ensures top of certificates/screenshots is visible */
+            object-position: top; 
+        }
+
+        .layer {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(0,0,0,0.1), #ff004f);
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+            text-align: center;
+            font-size: 14px;
+            transition: height 0.5s;
+        }
+
+        .layer h3 {
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .layer p {
+            color: #fff;
+        }
+
+        .layer i {
+            margin-top: 20px;
+            color: #ff004f;
+            background: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+        }
+
+        .work:hover img {
+            transform: scale(1.1);
+        }
+
+        .work:hover .layer {
+            height: 100%;
+        }
+
+        /* --- BASIC STYLING (Add your existing style.css content here) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background: #080808;
+            color: #fff;
+        }
+        .container {
+            padding: 10px 10%;
+        }
+        /* (Shortened for brevity, use your full style.css for colors/nav) */
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="header">
@@ -14,52 +114,55 @@
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                
-                <h1>Hi, I'm <span>Abhi</span><br>From India</h1>
+                <p>AI/ML Enthusiast & Full Stack Developer</p>
+                <h1>Hi, I'm <span>Abhi</span><br>Pandey from India</h1>
             </div>
         </div>
     </div>
 
     <div id="about">
         <div class="container">
-            <div class="row"> <div class="about-col-1">
-                    <img src="images/IMG20241117121834.jpg" alt="A photo of Abhi Pandey">
+            <div class="row"> 
+                <div class="about-col-1">
+                    <img src="images/IMG20241117121834.jpg" alt="Abhi Pandey">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Hello! I'm Abhi Pandey, from Kanpur, India, currently in my 3rd year of studies at VIT Bhopal. I'm enthusiastically building foundational knowledge in front-end development (HTML, CSS, JavaScript) and Java programming, particularly for Android app development. While I possess a beginner-level understanding in these technical areas, I am a highly motivated and rapid learner, constantly eager to expand my skills and tackle new challenges. Beyond coding, I also bring an introductory understanding of event organization, driven by a passion for planning and executing successful experiences, and I'm keen to learn and contribute in both the tech and event management domains.</p>
+                    <p>I am a B.Tech student at VIT Bhopal specializing in AI & ML (CGPA: 8.47). I am experienced in building end-to-end analytical pipelines and translating complex datasets into actionable business insights. Currently gaining hands-on experience in AI Engineering and Front-End Development, I have a strong foundation in SQL, Python, and Power BI.</p>
+                    
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
                         <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
                         <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
                     </div>
+
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Front-End Web Development</span><br>Building responsive and interactive web interfaces using HTML, CSS, and JavaScript.</li>
-                            <li><span>Java Programming</span><br>Developing foundational applications and understanding core concepts in Java.</li>
-                            <li><span>Learning & Growth</span><br>Actively expanding knowledge in advanced development frameworks and mobile platforms.</li>
+                            <li><span>AI/ML & Data</span><br>Generative AI, LLMs, RAG Systems, TensorFlow, Power BI, SQL.</li>
+                            <li><span>Languages</span><br>Java, C++, Python, JavaScript, MATLAB.</li>
+                            <li><span>Web Development</span><br>React, Node.js, HTML5, CSS3, Tailwind CSS.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>President</span><br>Defence Warriors Club, VIT Bhopal</li>
-                            <li><span>Coordinator</span><br>Vitronix Club, VIT Bhopal</li>
-                            <li><span>Event Management</span><br>FUSION CLUB, VIT BHOPAL</li>
-                            <li><span>Event Management</span><br>UX Club, VIT BHOPAL</li>
+                            <li><span>AI Engineer Intern (Jan 2026 - Present)</span><br>PearlThoughts - Engineering AI-driven workflows.</li>
+                            <li><span>Google Cloud GenAI Intern</span><br>SmartBridge - Developed skills in LLMs on GCP.</li>
+                            <li><span>ML Intern</span><br>Suvidha Foundation - Optimizing social-impact models.</li>
+                            <li><span>Club President</span><br>Defence Warriors Club, VIT Bhopal.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>B.Tech in Computer Science and Engineering (AI/ML Specialization)</span><br>VIT Bhopal<br>Expected Graduation: 2027</li>
-                            <li><span>Secondary and Higher Secondary Education (Class 10th & 12th)</span><br>KDMA World School, Kanpur</li>
+                            <li><span>2023 - 2027</span><br>B.Tech in CSE (AI & ML) at VIT Bhopal (CGPA: 8.47)</li>
+                            <li><span>2022</span><br>Class 10th & 12th at KDMA World School, Kanpur</li>
                         </ul>
                     </div>
                 </div>
@@ -69,24 +172,24 @@
 
     <div id="services">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
+            <h1 class="sub-title">My Expertise</h1>
             <div class="services-list">
                 <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <h2>AI Engineering</h2>
+                    <p>Building specialized workflows for automated systems and integrating LLMs into production environments using RAG and LangChain.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2>Data Analytics</h2>
+                    <p>Translating complex datasets into insights using SQL and Power BI. Experienced in analyzing large-scale ride records and business data.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
                     <i class="fa-solid fa-code"></i>
-                    <h2>Front End Development</h2>
-                    <p>As an aspiring front-end developer, I possess beginner-level understanding of HTML, CSS, and JavaScript. I'm committed to continuous learning, constantly exploring new technologies, and ready to dive deeper into building engaging web experiences.</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>Java Programming</h2>
-                    <p>I possess foundational knowledge in Java programming, having explored its core concepts and basic application development. I am highly motivated to deepen my understanding, master advanced Java techniques, and apply them to various software development challenges.</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>Event Organizer</h2>
-                    <p>I have an introductory understanding of event planning and organization, backed by a strong passion for creating memorable experiences. I am keen to learn the intricacies of event management and am ready to take on new challenges to refine my expertise.</p>
+                    <h2>Web Developer</h2>
+                    <p>Developing responsive interfaces with React and Tailwind CSS, and robust backends with Node.js and Java.</p>
                     <a href="#">Learn more</a>
                 </div>
             </div>
@@ -98,41 +201,76 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/Screenshot 2025-07-02 094408.png" alt="Skin Disease Detection Project Screenshot">
+                    <img src="images/Screenshot 2026-02-02 191016.png">
                     <div class="layer">
-                        <h3>Skin Disease Detection</h3>
-                        <p>Developed a prototype application focused on identifying common skin conditions using image analysis. This project involved foundational concepts of data processing and basic classification, showcasing an early exploration into practical applications of technology in healthcare.</p>
-                        <a href="https://huggingface.co/spaces/Tanishqdas/skindieasedetection?logs=container"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <h3>ERPNext AI Analyzer</h3>
+                        <p>A RAG-based CLI tool using Python and LangChain.</p>
+                        <a href="https://github.com/Abhi4621"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/Screenshot 2025-07-02 094806.png" alt="Plant Disease Detection Project Screenshot">
+                    <img src="images/Screenshot 2026-02-02 191409.png">
                     <div class="layer">
-                        <h3>Plant Disease Detection</h3>
-                        <p>Explored the use of image recognition techniques to identify common diseases in plants. This project involved basic data collection and analysis, demonstrating an initial understanding of applying technology to agricultural challenges.</p>
-                        <a href="https://huggingface.co/spaces/Tanishqdas/Potato_diease"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <h3>Ola Cancellation Analysis</h3>
+                        <p>SQL & Power BI project analyzing 20,000+ records.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                  <div class="work">
-                    <img src="images/Screenshot 2025-12-07 111203.png" alt="Plant Disease Detection Project Screenshot">
+                <div class="work">
+                    <img src="images/Screenshot 2026-02-02 190358.png">
                     <div class="layer">
-                        <h3>Movie Simulator</h3>
-                        <p>Developed an interactive movie simulation project showcasing component-based UI and dynamic rend.</p>
-                        <a href="https://github.com/Abhi4621/React-Movie-Simulator"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <h3>Luxury Virtual Consultant</h3>
+                        <p>React/Tailwind recommendation engine.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-            </div> </div> </div> <div id="contact">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="certifications">
         <div class="container">
-            <div class="row"> <div class="contact-left">
+            <h1 class="sub-title">Certifications</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images\\1768886117482.jpeg">
+                    <div class="layer">
+                        <h3>Google Cloud GenAI</h3>
+                        <p>Focused on LLMs and prompt engineering on GCP.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images\\Screenshot 2026-02-02 192300.png">
+                    <div class="layer">
+                        <h3>Applied ML in Python</h3>
+                        <p>Practical implementation using Scikit-learn.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images\\Screenshot 2026-02-02 192547.png">
+                    <div class="layer">
+                        <h3>IT Support Professional</h3>
+                        <p>Foundations of networking, OS, and security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row"> 
+                <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-solid fa-paper-plane"></i> abhipandey.4621@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>7905374087</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 7905374087</p>
                     <div class="social-icons">
                         <a href="https://github.com/Abhi4621"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.instagram.com/_abhii_pandey/"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/abhi-pandey-0257bb274/"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://x.com/AbhiPan85917053"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/_abhii_pandey/"><i class="fa-brands fa-instagram"></i></a>
                     </div>
-                    <a href="images/my_resume latest.pdf" download class="btn btn2">Download Resume</a>
+                    <a href="images/resume_3 (2).pdf" download class="btn btn2">Download Resume</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
@@ -151,56 +289,17 @@
     </div>
 
     <script>
-        // --- SCRIPT FOR GOOGLE SHEET FORM SUBMISSION ---
-        const scriptURL = ''; // <-- IMPORTANT: Add your Google Web App URL here!
-        const form = document.forms['submit-to-google-sheet'];
-        const msg = document.getElementById("msg");
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    // IMPROVEMENT: Show success message and clear the form
-                    msg.innerHTML = "Message sent successfully!";
-                    setTimeout(function() {
-                        msg.innerHTML = "";
-                    }, 5000); // Message disappears after 5 seconds
-                    form.reset();
-                })
-                .catch(error => console.error('Error!', error.message));
-        });
-    </script>
-
-    <script>
-        // --- SCRIPT FOR TABS (ABOUT ME SECTION) ---
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-
-        // CORRECTED: The function now accepts the event 'evt' and the 'tabName'
         function opentab(evt, tabName) {
-            for (let tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (let tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            // Uses the passed 'evt' object to identify the clicked element
+            for (let tablink of tablinks) { tablink.classList.remove("active-link"); }
+            for (let tabcontent of tabcontents) { tabcontent.classList.remove("active-tab"); }
             evt.currentTarget.classList.add("active-link");
             document.getElementById(tabName).classList.add("active-tab");
         }
-    </script>
-
-    <script>
-        // --- SCRIPT FOR SIDE NAVIGATION MENU (MOBILE VIEW) ---
         var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
+        function openmenu() { sidemenu.style.right = "0"; }
+        function closemenu() { sidemenu.style.right = "-200px"; }
     </script>
 </body>
 </html>
